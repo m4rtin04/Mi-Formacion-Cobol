@@ -16,7 +16,11 @@ Bienvenido/a a mi repositorio de prácticas y ejercicios del curso de Desarrolla
 ---
 
 ## 📁 Estructura del repositorio
-
+/01-Fundamentos
+/02-Archivos
+/03-DB2
+/04-CICS
+/05-ProyectoFinal
 
 Cada carpeta contiene programas con su código fuente y documentación.
 
