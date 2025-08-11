@@ -10,8 +10,10 @@ Bienvenido/a a mi repositorio de prácticas y ejercicios del curso de Desarrolla
 |-------|-------------|-------------|
 | 1 | Fundamentos de programación estructurada | COBOL básico |
 | 2 | Manejo de archivos secuenciales | JCL, COBOL |
-| 3 | Acceso a bases de datos | DB2, SQL, COBOL |
-| 4 | Proyecto final | Aplicación completa Mainframe |
+| 3 | Manejo de archivos indexados | COBOL, JCL |
+| 4 | Acceso a bases de datos | DB2, SQL, COBOL |
+| 5 | Interfaz de usuario con transacciones | CICS |
+| 6 | Proyecto final | Aplicación completa Mainframe |
 
 ---
 
@@ -37,7 +39,7 @@ Soy Martín Ake, desarrollador COBOL en formación. Este repositorio muestra mi 
 
 ## 📌 Tecnologías usadas
 
-`COBOL` `JCL` `DB2` `CICS` `Mainframe` `TSO` `Z/OS`
+`COBOL` `JCL` `DB2` `SQL` `CICS` `Mainframe` `TSO` `Z/OS`
 
 ---
 
