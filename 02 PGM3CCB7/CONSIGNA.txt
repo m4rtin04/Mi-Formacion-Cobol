@@ -1,0 +1,44 @@
+ Código COBOL 
+ 
+ 
+OBJETIVO 
+  - Construir un nuevo programa en código COBOL 
+ 
+. 
+  - Al finalizar esta práctica el estudiante habrá logrado un nuevo objetivo: PRACTICAR 
+CONCEPTO CÓDIGO COBOL  en forma exitosa; o sea que, al ejecutarlo realiza la 
+funcionalidad solicitada 
+ 
+ 
+ESPECIFICACIONES 
+ 
+ 
+NOMBRE DEL PROGRAMA: PGM3Cxxx (XXX = últimas letras del usuario TSO) 
+ 
+ 
+1. Partir como esqueleto del programa   
+        KC02788.ALU9999.FUENTE(PGMPRUAR)  
+ estructura del archivo de entrada:  KC02788.ALU9999.COPYLIB(CPCLI) 
+ 
+  
+ 
+2. Leer secuencialmente los registros del archivo CLIENTES. 
+ 
+ 
+3. Con cada uno de los registros leídos; hacer: 
+ 
+                3.1.  SELECCIONAR solamente los registros cuyo campo  
+                                          CLI-TIP-DOC = ‘DU’ 
+3.2. Con los registros seleccionados; SUMAR campo CLI-SALDO  en un 
+totalizador general 
+ 
+ 
+ 
+ 
+4. Al final del programa; MOSTRAR(DISPLAY): Total importe sumado para tipo de documento 
+DU. 
+. 
+ 
+JCL para prueba:  KC02788.ALU9999.FUENTE(EJESUIMP) 
+ 
+Archivo físico: KC02788.ALU9999.CURSOS.CLIENTE
