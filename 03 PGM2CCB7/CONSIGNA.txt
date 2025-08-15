@@ -1,0 +1,44 @@
+                                Clase asincrónica: Primer corte de control 
+
+OBJETIVO - - 
+Construir un programa de corte de control y ejecutarlo exitosamente. Como es el 
+primer programa con esta estructura típica; solamente se hará CORTE DE CONTROL 
+por SUCURSAL. 
+Al finalizar esta práctica el estudiante habrá logrado un nuevo objetivo: ESCRIBIR 
+CÓDIGO COBOL CON UN CORTE DE CONTROL en forma exitosa; o sea que, al 
+ejecutarlo, resuelve el corte de control solicitado. 
+
+ESPECIFICACIONES 
+NOMBRE DEL PROGRAMA: PGM2Cxxx (XXX = últimas letras del usuario TSO) 
+Podrán tomar como ejemplo:  KC02788.ALU9999.FUENTE(PGMCORTE)  
+1. Copiar el archivo: KC02788.ALU9999.CURSOS.CORTE    en 
+USERID.CURSOS.CORTE 
+Su estructura será la expresada en  
+KC02788.ALU9999.COPYLIB(CORTE) 
+Cada registro del archivo es de largo fijo de 20 bytes de largo.  
+2. Se leerán secuencialmente los registros del archivo. 
+2. Con los registros procesados; hacer corte de control por el campo WS-SUC-NRO  
+4. Al final de cada corte de SUCURSAL; MOSTRAR(DISPLAY): Número de sucursal e importe 
+total junto a la sumatoria de importes correspondientes a dicha sucursal (campo 
+WS-SUC-IMPORTE).  Con máscara de edición que elimine los ceros no significativos. 
+
+Ejemplo: 
+Sucursal 1   1.000.000      
+Sucursal 2   21.148      
+Sucursal 3   33.458       
+5. Al final del programa MOSTRAR: el total general de importes para el archivo procesado. 
+Sumatoria de WS-SUC-IMPORTE. Con máscara de edición que elimine los ceros no significativos.
+Ejemplo: 
+TOTAL GENERAL   1.054.6006      
+ 
+6. Instrucciones para ejecución del programa:  
+ 
+Utilizar el JCL de ejecución que está en:   
+KC02788.ALU9999.FUENTE(JCLCORT1) 
+ 
+Modificándolo para que pueda ejecutarlo cada user id, gracias! 
+ 
+1) Nombre del JCL 
+2) Nombre del programa a ejecutar 
+3) STEPLIB desde donde carga el programa objeto 
+4) Nombre de ASSIGN y DATASET asociado
