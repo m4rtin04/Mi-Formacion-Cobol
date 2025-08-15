@@ -1,0 +1,53 @@
+                                   Corte de control (2 claves de corte) 
+
+OBJETIVO:  - 
+Modificar el  programa de corte de control por SUCURSAL; agregando otro 
+corte de control por TIPO DE CUENTA y ejecutarlo exitosamente. 
+
+ESPECIFICACIONES DE LA ACTIVIDAD: - 
+Se HIZO un corte mayor por SUCURSAL y ahora se agrega otro menor por TIPO DE CUENTA 
+NOMBRE DEL PROGRAMA: PGM4Cxxx (XXX = últimas letras del usuario TSO) 
+1. Copiar el archivo de datos 
+KC02788.ALU9999.CURSOS.CORTE    en  
+KC03AXX.CURSOS.CORTE (donde XXX = tres últimas letras y/o números de USERID TSO)
+Su estructura está disponible en KC02788.ALU9999.COPYLIB(CORTE) 
+Cada registro del archivo es de largo fijo con 20 bytes de largo.  
+2. Leer secuencialmente los registros del archivo 
+3. Con los registros leídos; ya tienen corte de control por SUCURSAL campo WS-SUC-NRO.  
+4. Agregar corte de control por tipo de cuenta el campo WS-SUC-TIPC1 
+5. Al final de cada corte de SUCURSAL; MOSTRAR(DISPLAY): Número 
+de sucursal e importe total en $ junto a la sumatoria de importes 
+correspondientes a dicha sucursal (campo WS-SUC-IMPORTE).  Con 
+máscara de edición que elimine los ceros no significativos: 
+Ejemplo: 
+Sucursal 1  1.000.000       
+Sucursal 2  21.148        
+Sucursal 3  33.458        
+
+6. Al final de cada corte de tipo de cuenta; MOSTRAR(DISPLAY): tipo de 
+cuenta junto a la sumatoria de importes correspondientes a dicho tipo de 
+cuenta (campo WS-SUC-IMPORTE).  Con máscara de edición que elimine los
+ceros no significativos. 
+ 
+Ejemplo: 
+ Sucursal 1          
+     Tipo de cuenta 1      500.000 
+     Tipo de cuenta 2      500.000  
+                           1.000.000 
+ 
+ Sucursal 2      
+     Tipo de cuenta 1      20.000 
+     Tipo de cuenta 2      1.148 
+                           21.148 
+ 
+ Sucursal 3     
+     Tipo de cuenta 1      31.000 
+     Tipo de cuenta 2      2.458 
+                           33.458 
+ 
+ 
+7. Al final del programa MOSTRAR: el total general de importes. Sumatoria 
+de WS-SUC-IMPORTE. Con máscara de edición que elimine los ceros no significativos.
+ 
+Ejemplo: 
+TOTAL GENERAL         1.054.6006
