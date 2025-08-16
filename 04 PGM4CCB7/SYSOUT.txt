@@ -1,0 +1,18 @@
+SUCURSAL:01                                
+TIPO DE CUENTA 01 $          1.350,50      
+TIPO DE CUENTA 02 $            300,40      
+TIPO DE CUENTA 03 $         20.150,60      
+           TOTAL:  $         21.801,50     
+SUCURSAL:02                                
+TIPO DE CUENTA 01 $          1.500,00      
+TIPO DE CUENTA 02 $            350,10      
+TIPO DE CUENTA 03 $         30.150,50      
+           TOTAL:  $         32.000,60     
+SUCURSAL:45                                
+TIPO DE CUENTA 02 $            410,00      
+           TOTAL:  $            410,00     
+SUCURSAL:49                                
+TIPO DE CUENTA 02 $         33.450,00      
+           TOTAL:  $         33.450,00     
+****************************************** 
+TOTAL ACUMULADO: $         87.662,10     
