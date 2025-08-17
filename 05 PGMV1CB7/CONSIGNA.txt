@@ -1,0 +1,31 @@
+                            Construcción de un programa COBOL con validación 
+OBJETIVO: - 
+Construir un programa y ejecutarlo exitosamente, utilizando codificación 
+COBOL con validación. 
+ESPECIFICACIONES DE LA CONSIGNA: 
+1) En la biblioteca personal de cada usuario: 
+Cuyo nombre es: KC03XXX.CURSOS.FUENTE 
+Construir la nueva solución en código COBOL; con nombre PGMV1XXX 
+Donde “XXX” son las últimas letras y/o números de cada usuario TSO.  
+2) Leer en forma secuencial el fichero físico: a) KC02788.ALU9999.NOVCLIEN  
+3) Estructura de registro del archivo a leer: KC02788.ALU9999.COPYLIB(CPNOVCLI)
+4) Luego de leído cada registro validar:  a) TIPO DE DOCUMENTO; los válidos son: DU, PA, PE, CI
+5) Si es un registro válido: se podrá optar por alguna de las siguientes soluciones:
+a) SOLUCIÓN 1 Se grabará el registro en un archivo de salida con 
+diseño: KC02788.ALU9999.COPYLIB(CPNCLIV) . Teniendo en cuenta: 
+i) El campo NOV-SECUEN es un número de secuencia que comienza por 
+1 y se irá incrementando de 1 por cada registro grabado
+ii) El campo NOV-RESTO será la copia del registro del archivo de ENTRADA
+
+b) SOLUCIÓN 2 Se mostrará vía DISPLAY el tipo y número de 
+documento que resultó satisfactorio indicando: REGISTRO VALIDADO OK
+6) Si es un registro inválido: Mostrar por DISPLAY el tipo y número de 
+documento indicando: TIPO DOCUMENTO INVÁLIDO 
+7) Al final se mostrará:  
+a) CANTIDAD DE REGISTROS LEÍDOS 
+b) CANTIDAD DE REGISTROS GRABADOS 
+c) CANTIDAD DE REGISTROS ERRÓNEOS 
+8) Se podrá utilizar como esqueleto de código COBOL: 
+KC02788.ALU9999.FUENTE(PGMEJEM1) 
+9) Se podrá utilizar como esqueleto de JCL: 
+KC02788.ALU9999.FUENTE(JCLEJEM1)
