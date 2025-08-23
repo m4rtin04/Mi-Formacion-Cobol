@@ -1,0 +1,59 @@
+                              Apareo - Compresión conceptual 
+ 
+OBJETIVO: 
+  - Construir un código COBOL con el nuevo concepto de APAREO de archivos.
+ 
+IMAGEN CONCEPTUAL: 
+ 
+Se representa gráficamente el funcionamiento del programa PGMAPxxx. 
+Se ilustra el flujo de datos entre: -  los archivos de entrada,  - la lógica de procesamiento y - las salidas (incluido el aviso por consola cuando no se encuentra una cuenta).  
+ 
++---------------------------+     +-----------------------------+ 
+| ARCHIVO CLIENTE/CUENTA   |     | ARCHIVO DE MOVIMIENTOS     | 
+| KC02788.ALU9999.COPYLIB  |     | KC02788.ALU9999.COPYLIB     | 
+| (CLIENTE)                |     | (MOVIMCC)                   | 
+|--------------------------|     |-----------------------------| 
+|              |     |           | 
+| TIPO-CUE / NÚMERO-CUE    |     | TIPO-MOV / NÚMERO-MOV       | 
+| SALDO-CUENTA             |     | IMPORTE (+/-)               | 
++------------+-------------+     +-------------+---------------+ 
+             |                                   | 
+             |                                   | 
+             +------------+  APAREAR  +----------+ 
+ 
+                          |           | 
+                          v           v 
+                  +-----------------------------+ 
+                  |   PROGRAMA: PGMAPxxx        | 
+                  |                             | 
+                  |  - Une CLIENTE/CUENTA       | 
+                  |    con MOVIMIENTOS          | 
+                  |  - Actualiza SALDO          | 
+                  |  - Si no encuentra cuenta:  | 
+                  |    DISPLAY en consola       | 
+                  +-----------------------------+ 
+                                | 
+                                v 
+            +--------------------------------------+ 
+            | SALIDA: CUENTAS ACTUALIZADAS        | 
+            | o AVISOS por CONSOLE DISPLAY        | 
+            +--------------------------------------+ 
+ 
+Precondiciones: - Ambos archivos deben estar ordenados por 
+CLAVE-CUENTA/CLAVE-MOVIMIENTO.
+
+Clave de Apareo entre CLIENTE/CUENTA y MOVIMIENTOS: 
+Para realizar el apareo entre el archivo maestro de CLIENTE/CUENTA y el archivo de 
+MOVIMIENTOS, se debe utilizar la siguiente clave compuesta: 
+CLAVE DE APAREO = TIPO-CUE + NÚMERO-CUE 
+Correspondencias específicas: 
+● TIPO-CUE del archivo CLIENTE/CUENTA ↔ TIPO-MOV del archivo MOVIMIENTOS 
+● NÚMERO-CUE del archivo CLIENTE/CUENTA ↔ NÚMERO-MOV del archivo 
+MOVIMIENTOS 
+Por lo tanto, para que un movimiento se aplique correctamente, se debe cumplir: 
+TIPO-CUE = TIPO-MOV 
+NÚMERO-CUE = NÚMERO-MOV 
+Si no se encuentra esta coincidencia, se debe emitir un aviso por consola (DISPLAY). 
+Archivos físicos 
+1) CLIENTE/CUENTA: KC02788.ALU9999.CLIENTE 
+2) MOVIMIENTOS: KC02788.ALU9999.MOVIMICC 
