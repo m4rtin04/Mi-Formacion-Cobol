@@ -1,0 +1,64 @@
+                        Clase 16 sincrónica: Arreglos multidimensionales 
+ 
+ 
+OBJETIVO 
+ - Construir un programa con el nuevo concepto de ARREGLOS MULTIDIMENSIONALES. 
+ 
+ - Al finalizar esta práctica el estudiante habrá logrado un nuevo objetivo: ESCRIBIR 
+CÓDIGO COBOL CON arreglo multidimensional embebido en forma exitosa. 
+ -  Este nuevo objetivo representa poder trabajar con datos alineados según un orden específico: 
+ 
+o vector (1 dimensión) 
+o  tabla (2 dimensiones) 
+o  cubo (3 dimensiones). 
+ 
+ Son los únicos tipos de almacenamiento multidimensional embebido en código 
+COBOL que son reconocidos por el compilador COBOL. 
+ 
+En esta práctica, en particular, se trabajará con un VECTOR. 
+ 
+ESPECIFICACIONES 
+NOMBRE DEL PROGRAMA: PGMTABxx (XX = últimas letras del usuario TSO) 
+ 
+Se construirá un vector dentro de la Working Storage del programa según las indicaciones que se detallan: 
+  
+1)  Leer los 10 productos (FILE = PRODUCTO) que se comercializarán a partir del 
+próximo mes y cargarlos en un vector definido en Working. Está validado 
+previamente que el archivo de PRODUCTOS tendrá 10 registros. 
+ 
+      ESTRUCTURA DEL ÍTEM DEL VECTOR:   
+         CÓD-PRODUCTO  PIC 99 
+         DENOMINACIÓN   PIC X(30) 
+         PRECIO                  PIC 9(3)V99 
+ 
+2)  Layout del archivo PRODUCTO que tiene los 10 productos para cargarlos en 
+VECTOR: 
+ 
+         01 REG-PRODUCTO. 
+             03  CÓD-PRODUCTO  PIC 99. 
+             03 DENOMINACIÓN  PIC X(30). 
+el archivo con los 10 productos; y armar un vector en Working Storage Section. 
+  
+3)     Leer los precios; desde el archivo de PRECIOS, cuyo layout es: 
+         01 REG-PRECIOS. 
+             03 CÓD-PRODUCTO   PIC 99. 
+             03 PRECIO                PIC 9(3)V99. 
+  
+4)     Por cada registro de precio leído; buscar el producto en el vector:  
+4.1. Si se encuentra el PRODUCTO,   agregar el precio en el ítem que corresponda.  
+4.2. Si no se encuentra el PRODUCTO mostrar por: DISPLAY ‘PRODUCTO NO ENCONTRADO’ y CÒD PRECIO. 
+4.3. Controlar el fin de archivo de precios. Si se llega al final del archivo de Precios y 
+no se encuentra el producto; realizar mismo DISPLAY que punto 4.2. de este documento. 
+5) Al final del programa, luego de haber leído todos los precios y completado los ITEMS 
+del VECTOR, recorrer dicho vector (item x item) y mostrar (DISPLAY) todos los 
+precios para cada producto (CÓDIGO DE PRODUCTO; DENOMINACIÓN; PRECIO). 
+ 5.1. Ejemplo: 
+ 
+PRODUCTO UNO  
+$1.100,10 
+PRODUCTO DOS 
+$20.200,20 
+
+6) DATOS PARA LA PRUEBA 
+Archivo de productos:  KC02788.ALU9999.CURSOS.PRODUCT1  
+Archivo de precios:  KC02788.ALU9999.CURSOS.PRECIO 
