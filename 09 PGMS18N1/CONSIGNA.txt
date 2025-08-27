@@ -1,0 +1,40 @@
+Programa de práctica con VSAM 
+OBJETIVOS: - - - 
+Practicar acceso a almacenamiento VSAM KSDS. 
+ACTIVIDAD NRO 1: ACCESO SECUENCIAL. 
+ACTIVIDAD NRO 2: ACCESO RANDOM. 
+ESPECIFICACIONES DE LA ACTIVIDAD: 
+ACTIVIDAD NRO 1. 
+Se accederá secuencialmente a un archivo VSAM KSDS (clave = Tipo y Nro documento) de 
+CLIENTES y se irá apareando con un archivo de NOVEDADES; previamente ordenado por 
+Tipo y Nro de documento. - - - 
+Por cada registro de NOVEDADES  encontrado en CLIENTES acumular un contador 
+de “REGISTROS ENCONTRADOS” y también GRABAR un registro en archivo de 
+OUTPUT QSAM (registro misma estructura que archivo de CLIENTES) 
+Por cada registro de NOVEDADES NO encontrado en CLIENTES acumular un 
+contador de “REGISTROS NO ENCONTRADOS” 
+Al final del programa mostrar: - 
+CANTIDAD CLIENTES LEÍDOS - - - 
+CANTIDAD NOVEDADES LEÍDAS 
+CANTIDAD NOVEDADES ENCONTRADAS 
+CANTIDAD NOVEDADES NO ENCONTRADAS 
+Nombre del programa: Según considere el estudiante 
+Archivo de INPUT VSAM:  
+CLIENTES:  KC02788.ALU9999.CLIENT1.KSDS.VSAM    (contiene 33 registros) 
+ESTRUCTURA EN:  KC02788.ALU9999.COPYLIB(CPCLIE)  REGISTRO DE 50 
+BYTES DE LARGO 
+Archivo de INPUT QSAM:  
+NOVEDADES:  KC02788.ALU9999.NOVCLIEN    (contiene 13 registros) 
+ESTRUCTURA EN:  KC02788.ALU9999.COPYLIB(CPNOVCLI)  REGISTRO DE 50 
+BYTES DE LARGO 
+Archivo de OUTPUT QSAM:  
+CLIENTES:  KC03XXX.CLIENTES.ENCONTRADOS    
+ESTRUCTURA EN:  KC02788.ALU9999.COPYLIB(CPCLIENS)  REGISTRO DE 50 
+BYTES DE LARGO 
+Para su ejecución armar JCL necesario 
+Si se desea practicar la ejecución de IDCAMS para definición de un archivo VSAM; 
+podrán ver : KC02788.ALU9999.FUENTE(EJEVSAM) 
+Donde verán generar el CLUSTER con clave primaria Tipo y Número de documento y clave 
+alternativa por Número de cliente. 
+Para ejecutar el REPRO de STEP DEFREPRO; podrán utilizar como archivo de INPUT 
+(CLIENT1) la salida del programa anterior. Gracias
