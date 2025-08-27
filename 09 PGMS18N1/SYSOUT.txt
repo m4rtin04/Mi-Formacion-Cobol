@@ -1,0 +1,8 @@
+                                           
+ *CANTIDAD DE CLIENTES LEIDOS:  33         
+                                           
+ *CANTIDAD DE NOVEDADES LEIDAS:  13        
+                                           
+ *CANTIDAD DE NOVEDADES ENCONTRADAS:   7   
+                                           
+ *CANTIDAD DE NOVEDADES NO ENCONTRADAS:   7
