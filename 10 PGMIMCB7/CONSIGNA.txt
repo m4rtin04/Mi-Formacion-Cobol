@@ -1,0 +1,28 @@
+                       Clase asincrónica N°11: Programa de corte de control e impresión 
+OBJETIVOS: - - - 
+Armar un corte de control 
+Imprimir cada uno de los registros de CLIENTES leídos. 
+Grabar un archivo tipo FBA Fixed Block Address 
+Al finalizar esta actividad; el estudiante habrá desarrollado una nueva habilidad, que 
+es la generación de un archivo de tipo FBA en código COBOL. 
+
+ESPECIFICACIONES DE LA ACTIVIDAD: 
+PROGRAMA PGMIMXXX         
+Este programa leerá un archivo QSAM de CLIENTES para imprimir cada uno de los 
+registros leídos; haciendo corte de control por TIPO DE DOCUMENTO. 
+
+ARCHIVOS: 
+CLIENTES:  KC02788.ALU9999.CURSOS.CLIENTE  
+copiarlo como: KC03xxx.CURSOS.CLIENTE (xxx = 3 últimos caracteres userid) 
+ESTRUCTURA EN:  KC02788.ALU9999.COPYLIB(CPCLIENS)  REGISTRO DE 50 BYTES DE LARGO 
+ARCHIVO DE IMPRESIÓN - tipo FBA (largo registro 132 bytes) imprimir listado con el siguiente formato 
+●        IMPRIMIR TÍTULOS Y SUBTÍTULOS AL COMIENZO Y LUEGO DE 15 LÍNEAS IMPRESAS. 
+●        TÍTULO: DETALLE DE CLIENTES -  FECHA: Z9/99/9999 (tomar la fecha del sistema y formatearla) 
+●        SUBTÍTULO(encolumnado con líneas de detalle): Identificando cada uno de los campos que se mostrarán en línea de detalle 
+●        Por cada registro leído se imprimirá una línea de detalle. 
+CORTE DE CONTROL POR TIPO DOCUMENTO: 
+CANTIDAD TIPO DOCUMENTO   DU     ZZ9 
+Luego de cada corte de control; saltar de hoja. 
+Al final del programa mostrar por DISPLAY: 
+CANTIDAD CLIENTES LEÍDOS  
+CANTIDAD CLIENTES IMPRESOS 
