@@ -89,7 +89,7 @@
   **********************************************                
    01  WS-SUBTOTAL.                                             
        02  FILLER          PIC X(66)   VALUE SPACES.            
-       02  FILLER          PIC X(14)   VALUE 'SUBTOTAL TIPO'.   
+       02  FILLER          PIC X(25)   VALUE 'SUBTOTAL TIPO DOCUMENTO: '.   
        02  SUBT-TIPO-CTA   PIC X(12).                           
        02  FILLER          PIC X(05)   VALUE SPACES.            
        02  SUBT-IMPORTE    PIC -$ZZZ.ZZZ.ZZZ.ZZ9,99.            
@@ -224,7 +224,8 @@
        IF FS-LISTADO  IS NOT EQUAL '00'                            
            DISPLAY 'ERROR EN ABRIR OUTPUT LISTADO:' FS-LISTADO     
            MOVE 9999 TO RETURN-CODE                                
-           SET WS-FIN-REGISTRO TO TRUE                             
+           SET WS-FIN-REGISTRO TO TRUE  
+       END-IF
        .                                                           
    1200-F-ABRIR-ARCHIVOS. EXIT.                                     
                                                                    
@@ -299,7 +300,7 @@
                                                               
      WRITE REG-LISTADO  AFTER ADVANCING 1 LINE                 
                                                               
-     MOVE DET-TIPO-CTA   TO SUBT-TIPO-CTA                      
+     MOVE DET-TIP-DOC    TO SUBT-TIPO-CTA                      
      MOVE ACM-IMPORTE    TO SUBT-IMPORTE                       
                                                               
      WRITE REG-LISTADO  FROM WS-SUBTOTAL AFTER ADVANCING 1 LINE
