@@ -22,9 +22,9 @@
 //SORTOUT  DD DSN=KC03CB7.CLIENTES.SORT,                           
 //             DISP=(,CATLG,DELETE),                               
 //             SPACE=(TRK,(10,5),RLSE),        
-//             RECFM=FB,LRECL=50                         
+//             RECFM=FB,LRECL=50                        
 //SYSIN    DD *                                          
- SORT FIELDS=(16,2,CH,A,3,11,CH,A)                       
+ SORT FIELDS=(1,2,A,)                       
 //*                                                      
 //STEP3    EXEC PGM=PGMIMCB7                             
 //STEPLIB  DD DSN=KC03CB7.CURSOS.PGMLIB,DISP=SHR         
