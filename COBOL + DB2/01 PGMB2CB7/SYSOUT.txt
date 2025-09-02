@@ -1,0 +1,16 @@
+SUCURSAL:01                               
+    CANTIDAD DE CUENTAS: 02               
+SUCURSAL:02                               
+    CANTIDAD DE CUENTAS: 01               
+SUCURSAL:03                               
+    CANTIDAD DE CUENTAS: 02               
+SUCURSAL:04                               
+    CANTIDAD DE CUENTAS: 02               
+SUCURSAL:05                               
+    CANTIDAD DE CUENTAS: 02               
+SUCURSAL:06                               
+    CANTIDAD DE CUENTAS: 01               
+SUCURSAL:07                               
+    CANTIDAD DE CUENTAS: 01               
+******************************************
+TOTAL GENERAL DE CUENTAS: 11              
