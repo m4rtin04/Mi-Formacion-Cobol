@@ -1,0 +1,43 @@
+OBJETIVO
+- Se trata de la evaluación final, donde hemos considerado tres temas relevantes:
+o Acceso a tabla relacional DB2
+o Corte de Control
+o Impresión
+- Al finalizar esta evaluación, habrán podido trabajar según estos conceptos y generar
+una salida apropiada según las especificaciones
+- Están preparados para hacerlo exitosamente. Gracias a todos/as
+ESPECIFICACIONES
+NOMBRE DEL PROGRAMA: PGMBBxxx (XXX = últimas letras del usuario TSO)
+Con el nombre propuesto para el código fuente, codificar, compilar y ejecutar según las
+condiciones necesarias para resolver:
+PROGRAMA COBOL con SQL embebido.
+- Codificar un programa que acceda a las tablas DB2 que se indican a continuación y como
+salida un archivo FBA de impresión con registro de 93 bytes y cuya estructura la definirá
+cada programador.
+- Hacer query que acceda a tabla KC02803.TBBCURCLI y recupere los siguientes atributos:
+NROCLI
+NOMAPE
+FECNAC
+SEXO
+
+● Hacer CORTE DE CONTROL por AÑO DE NACIMIENTO y SEXO
+● Por corte de AÑO: imprimir el total de clientes correspondiente al año
+de la fecha de nacimiento (FECNAC)
+● Por corte de SEXO: imprimir el total de clientes correspondiente al sexo
+
+IMPRESIÓN
+TÍTULO
+- A la izquierda: FECHA de ejecución.
+- Al centro DETALLE DE CLIENTES,
+- A la derecha NOMBRE DEL PROGRAMA y NÚMERO DE PÁGINA, La hoja tiene 10 líneas.
+
+Subtítulo/Cabecera por corte AÑO DE NACIMIENTO indicar AÑO
+Subtítulo/Cabecera por corte SEXO indicar sexo según leyenda correspondiente.
+EJEMPLO - SEXO = :
+- F FEMENINO;
+- M MASCULINO;
+- O OTROS
+Cabecera de línea de detalle:Imprimir una línea de detalle por cada sexo indicando un
+título intermedio: NROCLI, NOMAPE, FECNAC, SEXO.
+ORGANIZAR los datos de la línea de detalle por debajo de cada cabecera.
+Al finalizar; mostrar por DISPLAY totales estadísticos: LEÍDOS, IMPRESOS
