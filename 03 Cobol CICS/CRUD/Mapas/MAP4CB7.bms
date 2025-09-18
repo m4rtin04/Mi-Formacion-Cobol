@@ -1,0 +1,60 @@
+          TITLE 'MAPA BAJA DE CLIENTE'                                   
+ MAP4CB7  DFHMSD TYPE=&SYSPARM,MODE=INOUT,CTRL=(FREEKB,FRSET),          *
+                LANG=COBOL,TIOAPFX=YES,COLOR=BLUE,TERM=3270-2            
+                                                                         
+ MAP4CB7  DFHMDI SIZE=(24,80)                                            
+          DFHMDF POS=(1,07),LENGTH=16,                                  *
+                INITIAL='BAJA DE CLIENTES'                               
+          DFHMDF POS=(1,34),LENGTH=1,ATTRB=PROT                          
+                                                                         
+          DFHMDF POS=(01,60),LENGTH=12,ATTRB=PROT,INITIAL='ECB7-MAP4CB7' 
+                                                                         
+ FECHA    DFHMDF POS=(02,60),LENGTH=10,ATTRB=PROT,INITIAL='99-99-9999'   
+ *********************************************************************** 
+          DFHMDF POS=(05,09),LENGTH=18,INITIAL='TIPO DE DOCUMENTO:',    *
+                ATTRB=(ASKIP,NORM),HILIGHT=OFF                           
+ TIPDOC   DFHMDF POS=(05,31),LENGTH=02,ATTRB=(UNPROT,IC,FSET),          *
+                HILIGHT=UNDERLINE,COLOR=NEUTRAL                          
+          DFHMDF POS=(05,34),LENGTH=01,ATTRB=(ASKIP,PROT)                
+ *********************************************************************** 
+          DFHMDF POS=(07,09),LENGTH=20,INITIAL='NUMERO DE DOCUMENTO:',  *
+                ATTRB=(ASKIP,NORM),HILIGHT=OFF                           
+ NUMDOC   DFHMDF POS=(07,31),LENGTH=11,ATTRB=(UNPROT,NUM,FSET),         *
+                HILIGHT=UNDERLINE,COLOR=NEUTRAL                          
+          DFHMDF POS=(07,43),LENGTH=01,ATTRB=(ASKIP,PROT)                
+           *********************************************************************** 
+          DFHMDF POS=(11,11),LENGTH=07,INITIAL='NROCLI:',               *
+                ATTRB=(ASKIP,NORM)                                       
+ NROCLI   DFHMDF POS=(11,31),LENGTH=03,PICOUT='9(3)',                   *
+                COLOR=NEUTRAL,ATTRB=(ASKIP,NORM)                         
+ *********************************************************************** 
+          DFHMDF POS=(12,11),LENGTH=18,INITIAL='NOMBRE Y APELLIDO:',    *
+                ATTRB=(ASKIP,NORM)                                       
+ NOMAPE   DFHMDF POS=(12,31),LENGTH=30,                                 *
+                COLOR=NEUTRAL,ATTRB=(ASKIP,NORM)                         
+ *********************************************************************** 
+          DFHMDF POS=(13,11),LENGTH=10,INITIAL='DIRECCION:',            *
+                ATTRB=(ASKIP,NORM)                                       
+ DIRE     DFHMDF POS=(13,31),LENGTH=30,                                 *
+                COLOR=NEUTRAL,ATTRB=(ASKIP,NORM)                         
+ *********************************************************************** 
+          DFHMDF POS=(14,11),LENGTH=06,INITIAL='EMAIL:',                *
+                ATTRB=(ASKIP,NORM)                                       
+ EMAIL    DFHMDF POS=(14,31),LENGTH=30,                                 *
+                COLOR=NEUTRAL,ATTRB=(ASKIP,NORM)                         
+ *********************************************************************** 
+          DFHMDF POS=(15,11),LENGTH=09,INITIAL='TELEFONO:',             *
+                ATTRB=(ASKIP,NORM)                                       
+ TEL      DFHMDF POS=(15,31),LENGTH=15,                                 *
+                COLOR=NEUTRAL,ATTRB=(ASKIP,NORM)                         
+ *********************************************************************** 
+ MSG      DFHMDF POS=(21,04),LENGTH=72,ATTRB=PROT,COLOR=RED,            *
+                PICOUT='X(72)',HILIGHT=UNDERLINE,                       *
+                INITIAL='INGRESE DATOS A CONSULTAR'                      
+          DFHMDF POS=(21,77),LENGTH=01,ATTRB=(ASKIP,PROT)                
+          DFHMDF POS=(24,05),LENGTH=12,INITIAL='ENTER:BUSCAR'            
+          DFHMDF POS=(24,25),LENGTH=11,INITIAL='PF3:LIMPIAR'             
+          DFHMDF POS=(24,44),LENGTH=12,INITIAL='PF4:CONFIRMAR'           
+          DFHMDF POS=(24,65),LENGTH=10,INITIAL='PF12:SALIR'              
+          DFHMSD TYPE=FINAL                                              
+          END                                                            
